@@ -1,0 +1,28 @@
+project Multi_Target is
+   Mode := external ("BUILD_MODE", "release");
+   -- Source and Object Directories
+   for Source_Dirs use ("src");
+   for Object_Dir use "obj";
+   for Exec_Dir use "bin";
+
+   -- This project comprises two executables: Server and Client.
+   -- We define them as separate projects but managed under this single GPR file.
+
+   -- Server Executable
+   package for_loop_reverse is
+      for Main use ("for_loop_reverse.adb");
+      for Executable ("for_loop_reverse.adb") use "for_loop_reverse";
+   end for_loop_reverse;
+
+   -- Client Executable
+   package for_loop is
+      for Main use ("for_loop.adb");
+      for Executable ("for_loop.adb") use "for_loop";
+   end for_loop;
+
+   -- Compiler options applicable to all projects
+   package Compiler is
+      for Switches ("Ada") use ("-g", "-O2", "-gnatwa");
+   end Compiler;
+
+end Multi_Target;
