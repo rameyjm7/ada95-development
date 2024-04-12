@@ -1,4 +1,4 @@
-project hello_world is
+project TCP_Socket_Server is
 
    -- Specify where the source Ada files are located
    for Source_Dirs use ("src");
@@ -8,17 +8,17 @@ project hello_world is
    for Exec_Dir use "bin";
 
    -- Main procedure of the project
-   for Main use ("hello_world.adb");
+   for Main use ("tcp_socket_server.adb");
 
    -- Compiler options to be used
    package Compiler is
       -- Enable all warnings and style checks
-      -- for Switches ("Ada") use ("-gnatwa", "-gnaty3");
+      for Switches ("Ada") use ("-gnatwa", "-gnaty3");
    end Compiler;
 
    -- Linker options if any specific are needed (not mandatory here)
-   -- package Linker is
-   --    for Default_Switches ("Ada") use ("-static");
-   -- end Linker;
+   package Linker is
+      for Default_Switches ("Ada") use ("-static");
+   end Linker;
 
-end hello_world;
+end TCP_Socket_Server;

@@ -1,3 +1,0 @@
-project socket_server is
-   for Source_Dirs use ("src");  --  <<<<
-end socket_server;
