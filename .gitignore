@@ -1,1 +1,18 @@
 .vscode/sftp.json
+*.stderr
+*.stdout
+*.bexch
+# Created by https://www.toptal.com/developers/gitignore/api/ada
+# Edit at https://www.toptal.com/developers/gitignore?templates=ada
+
+### Ada ###
+# Object file
+*.o
+
+# Ada Library Information
+*.ali
+
+# End of https://www.toptal.com/developers/gitignore/api/ada
+
+b_*.adb
+b_*.ads
