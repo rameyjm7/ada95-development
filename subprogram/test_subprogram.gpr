@@ -1,0 +1,24 @@
+project test_subprogram is
+
+   -- Specify where the source Ada files are located
+   for Source_Dirs use ("src");
+
+   -- Specify where the compiled object files and executables should be placed
+   for Object_Dir use "obj";
+   for Exec_Dir use "bin";
+
+   -- Main procedure of the project
+   for Main use ("test_subprogram.adb");
+
+   -- Compiler options to be used
+   package Compiler is
+      -- Enable all warnings and style checks
+      for Switches ("Ada") use ("-gnatwa", "-gnaty3");
+   end Compiler;
+
+   -- Linker options if any specific are needed (not mandatory here)
+   -- package Linker is
+   --    for Default_Switches ("Ada") use ("-static");
+   -- end Linker;
+
+end test_subprogram;
