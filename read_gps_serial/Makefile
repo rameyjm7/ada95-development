@@ -1,11 +1,13 @@
-NAME := bare_loop
+NAME := read_gps_serial
+DIR  := /home/jake/ada95-development/${NAME}
 
 all:
-	mkdir -p bin
-	mkdir -p obj
+	# mkdir -p bin
+	# mkdir -p obj
 	gnatmake -P ${NAME}.gpr
 
 clean:
+	cd ${DIR}
 	rm -rf obj
 	rm -rf bin
 	rm -rf *.o
@@ -14,6 +16,7 @@ clean:
 	rm -rf *.ali
 
 run:
+	cd ${DIR}
 	./bin/${NAME}
 
 
