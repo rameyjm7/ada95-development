@@ -16,5 +16,5 @@
 
 b_*.adb
 b_*.ads
-bin/*
+*/bin/*
 .vscode/settings.json
