@@ -1,5 +1,4 @@
 NAME := multi_target
-DIR  := /home/jake/ada95-development/multi_target_gpr
 
 all:
 	mkdir -p bin
@@ -8,7 +7,6 @@ all:
 	gnatmake -P multi_target.gpr for_loop
 
 clean:
-	cd ${DIR}
 	rm -rf obj
 	rm -rf bin
 	rm -rf *.o
@@ -17,7 +15,6 @@ clean:
 	rm -rf *.ali
 
 run:
-	cd ${DIR}
 	./bin/${NAME}
 
 

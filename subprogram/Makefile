@@ -1,5 +1,4 @@
 NAME := test_subprogram
-DIR  := /home/jake/ada95-development/subprogram
 
 all:
 	mkdir -p bin
@@ -7,7 +6,6 @@ all:
 	gnatmake -P ${NAME}.gpr
 
 clean:
-	cd ${DIR}
 	rm -rf obj
 	rm -rf bin
 	rm -rf *.o
@@ -16,7 +14,6 @@ clean:
 	rm -rf *.ali
 
 run:
-	cd ${DIR}
 	./bin/${NAME}
 
 
