@@ -20,3 +20,5 @@ b_*.ads
 .vscode/settings.json
 file_io/output.txt
 *.bin
+*.deps
+*.a

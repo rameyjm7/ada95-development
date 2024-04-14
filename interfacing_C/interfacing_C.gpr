@@ -1,0 +1,19 @@
+project interfacing_C is
+   
+   -- enable C support
+   for Languages use ("ada", "c");
+   
+   -- Specify where the source Ada files are located
+   for Source_Dirs use ("src");
+
+   -- Specify where the compiled object files and executables should be placed
+   for Object_Dir use "obj";
+   for Exec_Dir use "bin";
+
+   -- link in math library for pow binding
+   package Linker is
+      for Default_Switches ("Ada") use ("-lm");
+      -- for Default_Switches ("Ada") use ("-L/where/ever", "-lbar");
+   end Linker;
+
+end interfacing_C;
