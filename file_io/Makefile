@@ -3,7 +3,8 @@ NAME := file_io
 all:
 	mkdir -p bin
 	mkdir -p obj
-	gnatmake -P ${NAME}.gpr
+	gnatmake -P ${NAME}.gpr file_io_write
+	gnatmake -P ${NAME}.gpr file_io_write_read
 
 clean:
 	rm -rf obj

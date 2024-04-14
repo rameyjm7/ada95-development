@@ -7,8 +7,16 @@ project file_io is
    for Object_Dir use "obj";
    for Exec_Dir use "bin";
 
-   -- Main procedure of the project
-   for Main use ("file_io.adb");
+   package file_io_write is
+      for Main use ("file_io_write.adb");
+      for Executable ("file_io_write.adb") use "file_io_write";
+   end file_io_write;
+
+   package file_io_write_read is
+      for Main use ("file_io_write_read.adb");
+      for Executable ("file_io_write_read.adb") use "file_io_write_read";
+   end file_io_write_read;
+
 
    -- Compiler options to be used
    package Compiler is
