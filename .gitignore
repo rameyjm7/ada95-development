@@ -19,3 +19,4 @@ b_*.ads
 */bin/*
 .vscode/settings.json
 file_io/output.txt
+*.bin
