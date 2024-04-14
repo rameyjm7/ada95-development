@@ -9,6 +9,9 @@ https://learn.adacore.com/courses/intro-to-ada/index.html
 For ada95 specifically, I am referencing this document
 https://www.cs.uni.edu/~mccormic/4740/guide-c2ada.pdf
 
+Another link to a good resource
+https://ada-lang.io/
+
 
 # Docker dev container
 Open this in VS Code and you can build and run the code without hassle
