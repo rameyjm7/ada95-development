@@ -22,3 +22,5 @@ file_io/output.txt
 *.bin
 *.deps
 *.a
+bin/
+obj/
