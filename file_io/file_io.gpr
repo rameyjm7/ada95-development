@@ -17,6 +17,10 @@ project file_io is
       for Executable ("file_io_write_read.adb") use "file_io_write_read";
    end file_io_write_read;
 
+   package show_text_file_input_except is
+      for Main use ("show_text_file_input_except.adb");
+      for Executable ("show_text_file_input_except.adb") use "show_text_file_input_except";
+   end show_text_file_input_except;
 
    -- Compiler options to be used
    package Compiler is

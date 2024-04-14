@@ -5,6 +5,7 @@ all:
 	mkdir -p obj
 	gnatmake -P ${NAME}.gpr file_io_write
 	gnatmake -P ${NAME}.gpr file_io_write_read
+	gnatmake -P ${NAME}.gpr show_text_file_input_except
 
 clean:
 	rm -rf obj
