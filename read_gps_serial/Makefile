@@ -1,8 +1,8 @@
 NAME := read_gps_serial
 
 all:
-	# mkdir -p bin
-	# mkdir -p obj
+	mkdir -p bin
+	mkdir -p obj
 	gnatmake -P ${NAME}.gpr
 
 clean:
