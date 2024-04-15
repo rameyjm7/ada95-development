@@ -1,36 +1,15 @@
-with Ada.Text_IO;
+with Ada.Text_IO; use Ada.Text_IO;
 
-with Ada.Streams.Stream_IO;
-use  Ada.Streams.Stream_IO;
-
-procedure Open_Serial_Port  is
-   F         : File_Type;
-   S         : Stream_Access;
-   File_Name : constant String :=
-                 "/dev/ttyUSB0";
-
-   procedure Output (S  : Stream_Access;
-                     SV : String) is
-   begin
-      String'Output (S, SV);
-   end Output;
-
-   data : String (1 .. 128);
+procedure Read_Serial is
+   Input_File : File_Type;
 begin
+   Open (Input_File, In_File, "/dev/ttyUSB0");
+   declare
+      Line : String(1..1024);
    begin
-      Open (F, In_File, File_Name);
-      S := Stream (F);
-      while not End_Of_File (F) loop
-         String'Output (S, data);
-         Ada.Text_IO.Put_Line (" [GPS] " & data);
+      while not End_Of_File (input_file) loop
+         Put_Line (Get_Line (Input_File));
       end loop;
-      Close (F);
-   exception
-      when E : Device_Error =>
-         Ada.Text_IO.Put_Line ("Device error occurred");
-      when E : Use_Error =>
-         Ada.Text_IO.Put_Line ("Use error");
-      when E : Name_Error =>
-         Ada.Text_IO.Put_Line ("Name error");
    end;
-end Open_Serial_Port ;
+   Close (Input_File);
+end Read_Serial;
