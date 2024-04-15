@@ -1,6 +1,6 @@
 with Ada.Text_IO; use Ada.Text_IO;
 
-procedure Read_Serial is
+procedure Read_Serial_Port is
    Input_File : File_Type;
 begin
    Open (Input_File, In_File, "/dev/ttyUSB0");
@@ -12,4 +12,4 @@ begin
       end loop;
    end;
    Close (Input_File);
-end Read_Serial;
+end Read_Serial_Port;

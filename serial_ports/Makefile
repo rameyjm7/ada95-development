@@ -3,7 +3,7 @@ NAME := serial_ports
 all:
 	mkdir -p bin
 	mkdir -p obj
-	gnatmake -P ${NAME}.gpr open_serial_port
+	gnatmake -P ${NAME}.gpr read_serial_port
 
 clean:
 	rm -rf obj
