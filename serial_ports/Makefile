@@ -4,6 +4,8 @@ all:
 	mkdir -p bin
 	mkdir -p obj
 	gnatmake -P ${NAME}.gpr read_serial_port
+	gnatmake -P ${NAME}.gpr read_serial_port2
+	gnatmake -P ${NAME}.gpr process_gps_data
 
 clean:
 	rm -rf obj
